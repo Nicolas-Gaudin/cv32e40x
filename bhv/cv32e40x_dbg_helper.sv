@@ -42,7 +42,9 @@ module cv32e40x_dbg_helper
     logic        is_compressed;
     opcode_e     opcode;
     logic [REGFILE_NUM_READ_PORTS-1:0] rf_re;
+    /* verilator lint_off UNPACKED */
     rf_addr_t    rf_raddr[REGFILE_NUM_READ_PORTS];
+    /* verilator lint_on UNPACKED */
     logic        rf_we;
     rf_addr_t    rf_waddr;
     logic        illegal_insn;
